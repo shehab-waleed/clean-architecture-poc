@@ -209,8 +209,8 @@ test('command handlers have Handler suffix', function () {
         ->classes()
         ->toHaveSuffix('Handler')
         ->ignoring([
-            'Src\application\Commands\CreateUserCommand',
-            'Src\application\Commands\CreateUserResponse',
+            'Src\application\Commands\CreateUser\CreateUserCommand',
+            'Src\application\Commands\CreateUser\CreateUserResponse',
             // Add more command/response exceptions as needed
         ]);
 });

@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\application\Commands;
+namespace Src\application\Commands\CreateUser;
 
 use Src\domain\Contracts\IUserRepository;
 use Src\domain\Models\User;

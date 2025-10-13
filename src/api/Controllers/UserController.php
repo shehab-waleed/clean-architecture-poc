@@ -4,8 +4,8 @@ namespace Src\api\Controllers;
 
 use Illuminate\Routing\Controller;
 use Src\api\Requests\StoreUserRequest;
-use Src\application\Commands\CreateUserCommand;
-use Src\application\Commands\CreateUserCommandHandler;
+use Src\application\Commands\CreateUser\CreateUserCommand;
+use Src\application\Commands\CreateUser\CreateUserCommandHandler;
 
 class UserController extends Controller
 {
