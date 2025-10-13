@@ -17,6 +17,11 @@ class AppServiceProvider extends ServiceProvider
             \Src\domain\Contracts\IUserRepository::class,
             \Src\infrastructure\Repositories\EloquentUserRepository::class
         );
+
+        $this->app->bind(
+            \Src\domain\Contracts\IProductRepository::class,
+            \Src\infrastructure\Repositories\EloquentProductRepository::class
+        );
     }
 
     /**
