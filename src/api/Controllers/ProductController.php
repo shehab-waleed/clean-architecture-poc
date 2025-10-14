@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ProductController extends Controller
 {
 
+    //TODO Introduce view models instead of depending on the domain models directly
     public function show(
         int $id,
         GetProductQueryHandler $getProductQueryHandler
