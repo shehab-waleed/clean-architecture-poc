@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('order_line', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(\App\Models\Order::class)->constrained();
-            $table->foreignIdFor(\App\Models\Product::class)->constrained();
+            $table->foreignIdFor(\Src\infrastructure\Models\Order::class)->constrained();
+            $table->foreignIdFor(\Src\infrastructure\Models\Product::class)->constrained();
             $table->unsignedInteger('quantity');
             $table->unsignedInteger('unit_price');
             $table->timestamps();

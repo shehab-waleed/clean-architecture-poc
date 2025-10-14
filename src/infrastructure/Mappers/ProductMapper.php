@@ -2,8 +2,8 @@
 
 namespace Src\infrastructure\Mappers;
 
-use App\Models\Product;
 use Src\domain\ValueObjects\Money;
+use Src\infrastructure\Models\Product;
 
 class ProductMapper
 {

@@ -1,18 +1,17 @@
 <?php
 
-namespace App\Providers;
+namespace Src\infrastructure\Providers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class RepositoryProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
     public function register(): void
     {
-        // Bind repository interfaces to implementations
         $this->app->bind(
             \Src\domain\Contracts\IUserRepository::class,
             \Src\infrastructure\Repositories\EloquentUserRepository::class
@@ -29,6 +28,5 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../../src/infrastructure/Migrations');
     }
 }

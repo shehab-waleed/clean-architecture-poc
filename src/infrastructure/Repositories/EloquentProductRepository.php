@@ -10,7 +10,7 @@ class EloquentProductRepository implements IProductRepository
 {
     public function create(Product $product): Product
     {
-        $productModel = \App\Models\Product::create([
+        $productModel = \Src\infrastructure\Models\Product::create([
             'name' => $product->name,
             'description' => $product->description,
             'price' => $product->price->toMinor(),
@@ -21,7 +21,7 @@ class EloquentProductRepository implements IProductRepository
 
     public function findById(int $id): ?Product
     {
-        $productModel = \App\Models\Product::find($id);
+        $productModel = \Src\infrastructure\Models\Product::find($id);
 
         if (!$productModel) {
             return null;

@@ -15,7 +15,7 @@ class EloquentOrderRepository implements IOrderRepository
 
     public function findById(int $id): ?Order
     {
-        $order = \App\Models\Order::find($id);
+        $order = \Src\infrastructure\Models\Order::find($id);
 
         if (!$order) {
             return null;

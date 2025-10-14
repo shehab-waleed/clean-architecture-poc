@@ -2,8 +2,8 @@
 
 namespace Src\infrastructure\Mappers;
 
-use App\Models\Order;
 use Src\domain\Models\User;
+use Src\infrastructure\Models\Order;
 
 class OrderMapper
 {

@@ -2,9 +2,9 @@
 
 namespace Src\infrastructure\Repositories;
 
-use App\Models\User as EloquentUser;
 use Src\domain\Contracts\IUserRepository;
 use Src\domain\Models\User;
+use Src\infrastructure\Models\User as EloquentUser;
 
 class EloquentUserRepository implements IUserRepository
 {
