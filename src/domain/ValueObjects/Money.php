@@ -5,28 +5,28 @@ namespace Src\domain\ValueObjects;
 final readonly class Money
 {
     public function __construct(
-        protected float $amountInMajor
+        protected int $amountInMinor
     )
     {
     }
 
     public function toMajor(): float
     {
-        return $this->amountInMajor;
+        return $this->amountInMinor / 100;
     }
 
     public function toMinor(): int
     {
-        return (int) round($this->amountInMajor * 100);
+        return $this->amountInMinor;
     }
 
     public static function fromMinor(int $amountInMinor): self
     {
-        return new self($amountInMinor / 100);
+        return new self($amountInMinor);
     }
 
     public static function fromMajor(float $amountInMajor): self
     {
-        return new self($amountInMajor);
+        return new self($amountInMajor * 100);
     }
 }

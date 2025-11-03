@@ -16,10 +16,10 @@ final readonly class CreateUserResponse
     public static function from(User $user): self
     {
         return new self(
-            id: $user->getId(),
-            name: $user->getName(),
-            email: $user->getEmail()->getRaw(),
-            password: $user->getPassword()
+            id: $user->id,
+            name: $user->name,
+            email: $user->email->getRaw(),
+            password: $user->password
         );
     }
 }

@@ -13,7 +13,7 @@ class ProductMapper
             id: $product->getKey(),
             name: $product->name,
             description: $product->description,
-            price: new Money($product->price)
+            price: Money::fromMinor($product->price)
         );
     }
 }

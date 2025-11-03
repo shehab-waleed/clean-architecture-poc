@@ -11,15 +11,15 @@ class EloquentUserRepository implements IUserRepository
     public function create(User $user): User
     {
         $eloquentUser = EloquentUser::create([
-            'name' => $user->getName(),
-            'email' => $user->getEmail()->getRaw(),
-            'password' => $user->getPassword(),
+            'name' => $user->name,
+            'email' => $user->email->getRaw(),
+            'password' => $user->password
         ]);
 
         return new User(
             id: $eloquentUser->id,
             name: $eloquentUser->name,
-            email: $user->getEmail(),
+            email: $user->email,
             password: $eloquentUser->password
         );
     }
